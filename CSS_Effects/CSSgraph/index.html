@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>
+            CSS graph
+        </title>
+    </head>
+    
+    <style>
+        #box1 {
+            animation-name: buttonanimation;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            width: 100%;
+            height: 60px;
+            background: red;
+            border: 2px solid white;
+        }
+        #box2 {
+            animation-name: buttonanimation;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            width: 100%;
+            height: 60px;
+            background: green;
+            border: 2px solid white;
+
+        }
+        #box3 {
+            animation-name: buttonanimation;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            width: 100%;
+            height: 60px;
+            background: blue;
+            border: 2px solid white;
+        }
+        #box4 {
+            animation-name: buttonanimation;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            width: 100%;
+            height: 60px;
+            background: #333;
+            border: 2px solid white;
+        }
+        @keyframes buttonanimation {
+            0% {
+                width: 10%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+    
+    <body>
+        <div id='box1'></div>
+        <div id='box2'></div>
+        <div id='box3'></div>
+        <div id='box4'></div
+        <br></br>
+        <font color='red'>Linear</font>//
+        <font color='green'>Ease-in</font>//
+        <font color='blue'>Ease-out</font>//
+        <font color='#333'>Ease-in-out</font>//
+    </body>
+</html>

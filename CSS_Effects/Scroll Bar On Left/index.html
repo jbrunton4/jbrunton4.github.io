@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Scroll Bar On Left</title>
+		<style>
+			body {
+				background: #333;
+				margin: 100px;
+				min-width: 200px;
+				min-height: 200px;
+			}
+			.parent {
+				width: auto;
+				height: 100px;
+				animation-name: parentAnimate;
+				animation-delay: 5s;
+				animation-duration: 5s;
+				animation-fill-mode: both;
+				font-size: 50px;
+				background: #f1f1f1;
+				overflow-y: scroll;
+			}
+			.child {
+				animation-name: childAnimate;
+				animation-delay: 5s;
+				animation-duration: 5s;
+				animation-fill-mode: both;
+			}
+			@keyframes parentAnimate {
+				0% {transform: rotate(0);}
+				100% {transform: rotate(180deg);}
+			}
+			@keyframes childAnimate {
+				0% {transform: rotate(0);}
+				100% {transform: rotate(-180deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class='parent'>
+			<div class='child'>
+				Lorem Ipsum Dolor Sit Amet...
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>
+            Advanced Web Development
+        </title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: #333;
+                animation-name: bodyEntry;
+                animation-duration: 0.3s;
+            }
+            @keyframes bodyEntry {
+                0% {
+                    background: #f1f1f1;
+                }
+                100% {
+                    background: #333;
+                }
+            }
+            .middle {
+                width: 500px;
+                min-width: 500px;
+                max-width: 500px;
+                margin-left: calc(50% - 250px);
+                height: auto;
+                min-height: 300px;
+                max-height: 600px;
+                background: #f1f1f1;
+                border: 1px solid black;
+                border-radius: 24px;
+                text-align: center;
+                padding-top: 100px;
+                font-size: 30px;
+                margin-top: 200px;
+                margin-bottom: 200px;
+                animation-name: middleEntry;
+                animation-duration: 0.3s;
+                animation-delay: 0.1s;
+                transition: 0.2s;
+                color: #333;
+                animation-fill-mode: both;
+            }
+            @keyframes middleEntry {
+                0% {
+                    transform: scale(0);
+                    background: #333;
+                    color: #f1f1f1;
+                    box-shadow: 0 0 transparent;
+                    border: 250px solid black;
+                }
+                80% {
+                    transform: scale(1.5);
+                }
+                100% {
+                    transform: scale(1);
+                    background: #f1f1f1;
+                    color: #333;
+                    box-shadow: 4px 8px black;
+                    border: 1px solid black;
+                }
+            }
+            .middle input {
+                width: 50%;
+                height: 50px;
+                background: #333;
+                color: #f1f1f1;
+                border-radius: 24px;
+                transition: 0.2s;
+                margin-top: 5px;
+                animation-name: buttonEntry;
+                animation-duration: 0.3s;
+                animation-fill-mode: backwards;
+            }
+            .middle input:hover {
+                background: #2ecc71;
+                color: #333;
+                box-shadow: 2px 4px #333;
+                transform: scale(1.05);
+            }
+            .middle #button1 {
+                animation-delay: 0.4s;
+            }
+            .middle #button2 {
+                animation-delay: 0.5s;
+            }
+            .middle #button3 {
+                animation-delay: 0.6s;
+            }
+            @keyframes buttonEntry {
+                0% {
+                    transform: scale(0);
+                }
+                80% {
+                    transform: scale(1.1);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class='middle'>
+            What would you like to learn about?<br>
+            <input type='button' value='HTML tags' onclick='html();' id='button1'><br>
+            <input type='button' value='CSS properties' onclick='css();' id='button2'><br>
+            <input type='button' value='JavaScript' onclick='js();' id='button3'><br>
+        </div>
+        <script>
+            function html() {
+                window.location.href='html.html';
+            }
+            function css() {
+                window.location.href='css.html';
+            }
+            function js() {
+                window.location.href='js.html';
+            }
+        </script>
+    </body>
+</html>

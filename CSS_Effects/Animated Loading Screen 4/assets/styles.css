@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #262626;
+}
+.ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border: 3px solid #3c3c3c;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 150px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #fff000;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #fff000;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    animation: animateRing 2.5s linear both;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+@keyframes animateRing {
+    0% {
+        box-shadow: 0px 0px 0px 0px #333;
+        opacity: 1;
+    }
+    50% {
+        box-shadow: 8px 8px 8px 8px #fff000;
+        border-left: 3px solid #fff000;
+        border-top: 3px solid #fff000;
+    }
+    90% {
+        box-shadow: 0px 0px 0px 0px #333;
+        opacity: 1;
+        border-left: 3px solid #3c3c3c;
+    }
+    100% {
+        opacity: 0;
+    }
+}

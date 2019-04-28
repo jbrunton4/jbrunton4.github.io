@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+        <link rel='shortcut icon' type='image/ico' href='favicon.png'>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: 24px;
+            }
+            .header {
+                color: #f1f1f1;
+                height: 120px;
+                width: 100%;
+                background: #333;
+                font-size: 100px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='header'>
+            JavaScript
+        </div>
+        <div id='main'>
+            JavaScript is a method of interactinhg with a webpage. There are 2 simple things you can do with javascript: program a button or make a list.
+            First, though, you need to learn the HTML: <code>&lt;input type='button' value='click me' onclick='myFunction();'&gt;</code> makes a button (that has
+            the function myFunction();) and making dropdown menus like this one:
+            <select id='select'>
+                <option value='eggs'>Option1</option>
+                <option value='bacon'>Option2</option>
+            </select>
+            <input type='button' value='Go!' onclick='eggsOrBacon();'>
+            <script>
+                function eggsOrBacon() {
+                    var x = document.getElementById('select').value;
+                    alert(x);
+                }
+            </script>
+            You make this using a <code>&lt;select id='myselect'&gt;</code> tags with options like <code>&lt;option value='eggs'&gt;Eggs&lt;/option&gt;</code> (the
+            value in JS is this: <code>document.getElementById('myselect').value;</code>).
+            
+            <br></br>
+            The simplest way to do JavaScript is internal, between <code>&lt;script&gt;</code> tags. To make an alert, you use <code>alert('myalert');</code>, and to make
+            a function you do <code>function myFunction() {alert('hi');}</code> where your code goes between the {} tags.
+        </div>
+    </body>
+</html>
