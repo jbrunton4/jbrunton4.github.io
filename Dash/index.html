@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Dashboard</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(rgb(47,150,163), rgb(48,62,143));
+                overflow: hidden;
+            }
+            body .container {
+                margin: 10%;
+                font-size: 50px;
+                color: white;
+            }
+            body #hitcount {
+                margin: 5%;
+                align-self: baseline;
+                font-size: 30px;
+                color: white;
+            }
+        </style>
+        <script>
+            function renderTime() {
+                // Get date
+                var mydate = new Date();
+                var year = mydate.getYear();
+                // Check for common JS Error
+                if (year < 1000) {
+                    year += 1900;
+                }
+                var day = mydate.getDay();
+                var month = mydate.getMonth();
+                var daym = mydate.getDate();
+                var dayarray = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+                var montharray = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec");
+                
+                // Get time
+                var currentTime = new Date();
+                var h = currentTime.getHours();
+                var m = currentTime.getMinutes();
+                var s = currentTime.getSeconds();
+                
+                // Fix time to be 01:01:01 as opposed to 1:1:1
+                if (h == 24) {
+                    h = 0;
+                } else if (h > 12) {
+                    h = h - 0;
+                }
+                if (h < 10) {
+                    h = '0' + h;
+                }
+                if (m < 10) {
+                    m = '0' + m;
+                }
+                if (s < 10) {
+                    s = '0' + s;
+                }
+                
+                // Get the clock element and update it
+                var myClock = document.getElementById('clockDisplay');
+                myClock.textContent = '' + dayarray[day] + " " + daym + " " + montharray[month] + " " + year + " | " + h + ":" + m + ":" + s;
+                
+                // Repeat function
+                setTimeout("renderTime()", 1000);
+            }
+            // Trigger on load
+            setTimeout("renderTime()", 1000);
+        </script>
+    </head>
+    <body onload='renderTime();'>
+        <div id='clockDisplay' class='container'></div>
+        <div id='hitcount'>
+            Hits: 
+            <img src="http://hitwebcounter.com/counter/counter.php?page=7065793&style=0037&nbdigits=5&type=page&initCount=212" title="hits" Alt="hits"   border="0" >
+        </div>
+    </body>
+</html>
