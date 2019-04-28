@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>HTML</title>
+        <link rel='shortcut icon' type='image/ico' href='favicon.png'>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: 24px;
+            }
+            .header {
+                color: #f1f1f1;
+                height: 120px;
+                width: 100%;
+                background: #333;
+                font-size: 100px;
+                margin-top: 10px;
+            }
+            #example {
+                width:600px;
+                margin-left: calc(50% - 300px);
+                height: auto;
+                border: 1px solid #333;
+                border-radius: 12px;
+                background: #f1f1f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='header'>
+            HTML
+        </div>
+        <div id='main'>
+            HTML (HyperText Markup Language) is the essential language of the web. You can't have a website without it. This page, every other page on this site,
+            and any page that you can ever visit, was programmed using HTML.
+            
+            You can announce that something is a HTML document by typing <code><font color='blue'>&lt;!DOCTYPE html&gt;</font></code> at the top of a document.
+            The entire HTML document should be inside the <code><font color='blue'>&lt;html&gt;&lt;/html&gt;</font></code> (putting a tag with a / before the word
+            will close or end the tag).
+            
+            <br></br>For the header of a basic HTML page, you need a <code><font color='blue'>&lt;head&gt;&lt;/head&gt;</font></code> tag.
+            Inside of this, you may also want to add a <code><font color='blue'>&lt;title&gt;</font>My Page<font color='blue'>&lt;/title&gt;</font></code>
+            for a page title. You don't need to, but to avoid errors in the console, you might also want to add <code><font color='blue'>&lt;meta </font>charset<font color='blue'>=</font><font color='green'>'utf-8'</font><font color='blue'>&gt;</font></code>
+            </font></code>.
+            
+            <br></br>The main part of a page should go inside a <code><font color='blue'>&lt;body&gt;&lt;/body&gt;</font></code> tag. Some useful tags in here are
+            <code><font color='blue'>&lt;br&gt;&lt;/br&gt;</font></code> to start new lines, and <code><font color='blue'>&lt;img </font>src<font color='blue'>=</font><font color='green'>'myimage.png'</font></font><font color='blue'>&gt;&lt;/img&gt;</font></code>
+            for images (replace img with video for videos).
+            
+            <br></br>Example:<br>
+            <div id='example'>
+                <code>
+                &lt;!DOCTYPE html&gt;<br>
+                <font color='blue'>&lt;html&gt;</font><br>
+                <font color='#f1f1f1'>....</font><font color='blue'>&lt;head&gt;</font><br>
+                <font color='#f1f1f1'>........</font><font color='blue'>&lt;title&gt;</font>My Webpage<font color='blue'>&lt;/title&gt;</font><br>
+                <font color='#f1f1f1'>........</font><font color='blue'>&lt;meta </font>charset<font color='blue'>=</font><font color='green'>'utf-8'</font><font color='blue'>&gt;</font></font><br>
+                <font color='#f1f1f1'>........</font>My Webpage<br>
+                <font color='#f1f1f1'>....</font><font color='blue'>&lt;/head&gt;</font><br>
+                <font color='#f1f1f1'>....</font><font color='blue'>&lt;body&gt;</font><br>
+                <font color='#f1f1f1'>........</font>This is my webpage<font color='blue'>&lt;br&gt;</font><br>
+                <font color='#f1f1f1'>........</font><font color='blue'>&lt;img </font>src<font color='blue'>=</font><font color='green'>'myimage.png'</font></font><font color='blue'>&gt;&lt;/img&gt;</font><br>
+                <font color='#f1f1f1'>....</font><font color='blue'>&lt;/body&gt;</font><br>
+                <font color='blue'>&lt;/html&gt;</font>
+                </code>
+            </div>
+        </div>
+    </body>
+</html>

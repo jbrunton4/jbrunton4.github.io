@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>
+            Advanced Python
+        </title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: #333;
+                animation-name: bodyEntry;
+                animation-duration: 0.3s;
+			}
+            @keyframes bodyEntry {
+                0% {
+                    background: #f1f1f1;
+                }
+                100% {
+                    background: #333;
+                }
+            }
+            .middle {
+                width: 90%;
+                min-width: 90%;
+                max-width: 90%;
+                margin-left: 5%;
+                height: auto;
+                min-height: 90%;
+                background: #f1f1f1;
+                border: 1px solid black;
+                border-radius: 24px;
+                padding-top: 100px;
+                font-size: 30px;
+                margin-top: 100px;
+                margin-bottom: 10%;
+                animation-name: middleEntry;
+                animation-duration: 0.3s;
+                animation-delay: 0.1s;
+                transition: 0.2s;
+                color: #333;
+                animation-fill-mode: both;
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: justify;
+            }
+            @keyframes middleEntry {
+                0% {
+                    transform: scale(0);
+                    background: #333;
+                    color: #f1f1f1;
+                    box-shadow: 0 0 transparent;
+                    border: 250px solid black;
+                }
+                80% {
+                    transform: scale(1.5);
+                }
+                100% {
+                    transform: scale(1);
+                    background: #f1f1f1;
+                    color: #333;
+                    box-shadow: 4px 8px black;
+                    border: 1px solid black;
+                }
+            }
+            #title {
+                font-size: 50px;
+                font-weight: 500;
+                font-family: sans-serif;
+                width: 500px;
+                margin-left: calc(50% - 250px);
+                color: blue;
+                text-align: center;
+            }
+            .codeblock {
+                width: auto;
+                height: auto;
+                border: 1px solid #333;
+                border-radius: 24px;
+                padding: 5px;
+            }
+            .terminalblock {
+                width: auto;
+                height: auto;
+                border: 1px solid #333;
+                border-radius: 24px;
+                padding: 5px;
+                background: #333;
+                color: #f1f1f1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='middle'>
+            <div id='title'>
+                Python Advanced
+            </div>
+            
+            Modules are helpful in python as they allow you to do things that you cannot do in regular python. Python comes with a list of pre-installed
+            modules such as random, turtle, tkinter, and subprocess among others. There are also modules that you can install, for example, domino's pizza
+            has a module known as pizzapy, which allows pizza to be ordered through a python program. Once you set up pip (look for a tutorial online), you
+            can type <code>pip install modulename</code>. For example, if you wanted to install pyGame, you would do it like so:
+            
+            <div class='terminalblock'>
+                <code>
+                    Microsoft Windows [Version 10.0.17134.590]<br>
+                    (c) 2018 Microsoft Corporation. All rights reserved.<br></br>
+                    C:\> pip install pygame<br>
+                    Collecting pygame<br>
+                      Downloading https://files.pythonhosted.org/packages/db/e9/516a927fac1553110e5ea74cbb464f6f195fe02a1107969c8580c70c7329/pygame-1.9.5-cp36-cp36m-win_amd64.whl (4.3MB)<br>
+                        100% |████████████████████████████████| 4.3MB 2.0MB/s<br>
+                    Installing collected packages: pygame<br>
+                    Successfully installed pygame-1.9.5
+                </code>
+            </div>
+            
+            For now, you don't need to worry about installing modules, however, if you're not sure if the computer that you want your program to run on has the required module,
+            you can do this:
+            
+            <div class='codeblock'>
+                <code>
+                    <font color='orange'>from</font> subprocess <font color='orange'>import</font> call<br>
+                    call(<font color='green'>"pip install pygame"</font>)
+                </code>
+            </div>
+            
+            Subprocess' call causes a command to happen (if it can), so it's usefull for automatically installing modules via pip. 
+            
+            <br></br>A good first module to learn is random. You import it using <code><font color='orange'>import</font> random</code>.
+            If you don't want to type <code>randint.</code> before everything to do with the module, simply type <code><font color='orange'>from</font> random <font color='orange'>import</font> *</code>.
+            The random module includes 2 very useful functions: <code>random.choice()</code>, which takes multiple values or variables and randomly chooses between them, and
+            <code>random.randint()</code>, which takes 2 arguments (integers) and generates a random number between them, including the first but not the second.
+            
+            <br></br>OS is a module used for getting information or controlling the operating system, for example, <code>os.getlogin()</code> gets the user's login name, and
+            <code>os.startfile()</code> opens the file in the brackets, e.g. <code>os.startfile(<font color='green'>"notepad.exe"</font>)</code>.
+            
+            <br></br>Some modules, such as turtle, are more complex. You can use turtle to create drawings or even games. Start by importing the turtle module, then making a screen
+            like this: <code>wn = turtle.Screen()</code> (it doesn't have to be called wn, you can give it any name you want). You can change the background colour using <code>wn.bgcolor(<font color='green'>"black"</font>)</code>,
+            or whatever colour you wish. Remember to use the american spelling of the word colour (color).
+            
+            <br></br>A turtle is like a pen. To create a turtle, you need to give it a name, like this: <code>myTurtle = turtle.Turtle()</code> (remember to use a capital T in the
+            second word "turtle"). By default, turtles have a speed of 1, a pensize of 1, are the colour black, have pen down, and are at (0,0), and facing right. For basic movement,]
+            turtles can go forward(pixels) or fd(pixels), left(degrees) or lt(degrees), right(degrees) or rt(degrees). You can also set the heading, using seth(degrees).
+            
+            <br></br>FOR loops are useful in python - they allow repeats to happen, which is useful for making regular shapes. You create one like this:
+            
+            <div class='codeblock'>
+                <code>
+                    <font color='orange'>for</font> a <font color='orange'>in</font> <font color='purple'>range</font>(4):<br>
+                    <font style='color:transparent;'>....</font><font color='orange'>pass</font>
+                </code>
+            </div>
+            
+            You can use this to draw shapes like this:
+            
+            <div class='codeblock'>
+                <code>
+                    <font color='orange'>import</font> turtle<br>
+                    wn = turtle.Screen()<br>
+                    myTurtle = turtle.Turtle()<br>
+                    <font color='orange'>for</font> a <font color='orange'>in</font> <font color='purple'>range</font>(4):<br>
+                    <font style='color:transparent;'>....</font>myTurtle.fd(100)<br>
+                    <font style='color:transparent;'>....</font>myTurtle.lt(90)
+                </code>
+            </div>
+            
+            Some other features are <code>turtle.circle(radius)</code> and <code>turtle.write(string)</code>.
+            
+            <br></br>There are many more modules with documentation and tutorials to be found online.
+            
+            <br></br>At some point, by your own fault or the fault of a user, your program is going to get some errors. Any error in python will stop the
+            entire program from running - this is where error handling comes in. The code in "try" will be run, but if it fails, the code in "except" will be run.
+            Here is an example:
+            
+            <div class='codeblock'>
+                <code>
+                    myNum = <font color='purple'>input</font>(<font color='green'>"Pick a number : "</font>)<br>
+                    <font color='orange'>try</font>:<br>
+                    <font style='color: transparent;'>....</font><font color='purple'>int</font>(myNum)<br>
+                    <font color='orange'>except</font>:<br>
+                    <font style='color: transparent;'>....</font><font color='purple'>print</font>(<font color='green'>"Sorry, that's not a whole number."</font>)
+                </code>
+            </div>
+            
+            If you know exactly which type of error to expect, e.g. int('abc') would give a TypeError, you can put the error message in a variable like this:
+            
+            <div class='codeblock'>
+                <code>
+                    <font color='orange'>try</font>:<br>
+                    <font style='color: transparent;'>....</font><font color='purple'>int</font>(<font color='green'>"abc"</font>)<br>
+                    <font color='orange'>except</font> <font color='purple'>TypeError</font> <font color='orange'>as</font> myError:<br>
+                    <font style='color: transparent;'>....</font><font color='purple'>print</font>(<font color='purple'>str</font>(myError))
+                </code>
+            </div>
+            
+            
+            
+        </div>
+    </body>
+</html>
