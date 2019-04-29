@@ -16,3 +16,4 @@ while i < len(l):
         j += 1
     i += 1
 print('After : ' + str(l))
+input()
