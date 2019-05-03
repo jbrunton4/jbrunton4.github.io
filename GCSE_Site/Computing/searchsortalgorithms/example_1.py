@@ -1,8 +1,11 @@
 # for numbers only
+import random
 l = []
 datapoints = int(input('How many peices of data do you have? : '))
+lower = int(input('Lower bound : '))
+upper = int(input('Upper bound : '))
 for a in range(0,datapoints):
-    l.append(float(input('Enter new data : ')))
+    l.append(random.randint(lower,upper))
 i = 0
 print('Before : ' + str(l))
 while i < len(l):
