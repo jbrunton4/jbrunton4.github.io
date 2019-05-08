@@ -1,0 +1,124 @@
+body {
+                background: linear-gradient(to right, red, orange, yellow, orange, red);
+            }
+            .calc {
+                width: 408px;
+                height: 408px;
+                margin-left: calc(50% - 204px);
+                margin-top: calc(50% - 204px);
+            }
+            .calc table {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .calc table input {
+                width: 100px;
+                padding: 2px;
+                height: 100px;
+                animation-name: elementEntry;
+                animation-duration: 0.2s;
+                animation-fill-mode: both;
+            }
+            @keyframes elementEntry {
+                        0% {
+                                    transform: scale(0);
+                        }
+                        80% {
+                                    transform: scale(1.05);
+                        }
+                        100% {
+                                    transform: scale(1);
+                        }
+            }
+            .calc #textview {
+                width: 90%;
+                height: 50px;
+                background: #f1f1f1;
+                margin-left: calc(5% + 2px);
+                font-size: 50;
+                margin-bottom: 10px;
+                transition: 0.2s;
+                box-shadow: 4px 8px black;
+                transform: scale(1.1);
+                animation-name: elementEntry;
+                animation-delay: 0.6s;
+                animation-duration: 0.6s;
+                animation-fill-mode: both;
+            }
+            .calc table input {
+                border: none;
+                background: #333;
+                color: white;
+                font-size: 50;
+                transition: 0.2s;
+                border-radius: 24px;
+                border: 2px solid #333;
+            }
+            .calc table input:hover {
+                transform: scale(0.9);
+                box-shadow: 4px 8px black;
+                color: #333;
+                font-size: 60;
+                background: linear-gradient(to right, orange, yellow, orange);
+            }
+            #notworkingbutton {
+                transition: 0.2s;
+            }
+            #notworkingbutton:hover {
+                background: red;
+            }
+            #cbutton {
+                        animation-delay: 0.05s;
+            }
+            #powerbutton {
+                        animation-delay: 0.15s;
+            }
+            #button_seven {
+                        animation-delay: 0.25s;
+            }
+            #button_eight {
+                        animation-delay: 0.3s;
+            }
+            #button_nine {
+                        animation-delay: 0.35s;
+            }
+            #timesbutton {
+                        animation-delay: 0.4s;
+            }
+            #button_four {
+                        animation-delay: 0.45s;
+            }
+            #button_five {
+                        animation-delay: 0.5s;
+            }
+            #button_six {
+                        animation-delay: 0.55s;
+            }
+            #minusbutton {
+                        animation-delay: 0.6s;
+            }
+            #button_one {
+                        animation-delay: 0.65s;
+            }
+            #button_two {
+                        animation-delay: 0.7s;
+            }
+            #button_three {
+                        animation-delay: 0.75s;
+            }
+            #dividebutton {
+                        animation-delay: 0.8s;
+            }
+            #button_zero {
+                        animation-delay: 0.85s;
+            }
+            #pointbutton {
+                        animation-delay: 0.9s;
+            }
+            #addbutton {
+                        animation-delay: 0.95s;
+            }
+            #calcbutton {
+                        animation-delay: 1s;
+            }
