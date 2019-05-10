@@ -86,6 +86,149 @@
             It is known as a bubble sort because data bubbles up to the top. It is relatively easy to code a bubble sort, but they are quite slow when sorting through lots of data.
             
             <br></br>A bucket sort sorts data into categories (often they are bubble sorted after this). They are harder to code but more effecient with larger sets of data.
+            
+            <br></br>An insertion sort is similar to a bubble sort, but can move multiple places at a time.
+            
+            <br></br>A linear search algorithm looks for a target at list[0]. If it's not there, it looks in list[1], list[2] and so on.
+            
+            <br></br>Binary search compares the target against the middle peice of data in a sorted list. If the middle peice is lower than the target,
+            it must be in the right half, otherwise, it's in the left half. It then discards the other half of the list. In the remaining half, it looks for the middle,
+            compares it against the target, discards the useless half of the list, and then repeats until it finds the target. 
+			
+			<table>
+				<tr>
+					<td>
+						Algorithm Name
+					</td>
+					<td>
+						Searching or Sorting?
+					</td>
+					<td>
+						How Does it Work?
+					</td>
+					<td>
+						What are the Benefits?
+					</td>
+					<td>
+						What are the Disadvantages
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Bubble
+					</td>
+					<td>
+						Sorting
+					</td>
+					<td>
+						Compares adjacent pieces of data and swaps them if they are in the wrong order, then moves onto the next set of data. Once it gets to the end of the list, it goes through the list all over again until it sorts 2 identical times, at which point it is finished.
+					</td>
+					<td>
+						It’s easy to code and good for small sets of data.
+					</td>
+					<td>
+						It takes a long time with large sets of data
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Insertion
+					</td>
+					<td>
+						Sorting
+					</td>
+					<td>
+						Looks at a piece of data. If it is in the wrong place, it will be slipped into the correct place.
+					</td>
+					<td>
+						It’s relatively easy to code and is faster than the bubble.
+
+					</td>
+					<td>
+						It isn’t the fastest and isn’t too good for very large lists. 
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Merge
+					</td>
+					<td>
+					Sorting
+					</td>
+					<td>
+					Compares sets of 2, 4, 8 and so on until the list is sorted.
+
+					</td>
+					<td>
+						It is very fast and good for large sets of data.
+
+					</td>
+					<td>
+						It is more difficult to code.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+					Bucket
+					</td>
+					<td>
+					Sorting
+					</td>
+					<td>
+					Adds each data into a group based on its properties.
+
+					</td>
+					<td>
+					It is faster than a bubble sort.
+
+					</td>
+					<td>
+					Each bucket may still be unsorted. This can be solved by using another algorithm.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+					Linear
+					</td>
+					<td>
+					Searching
+					</td>
+					<td>
+					Looks through data at index 0, 1, 2 and so on until it finds the data that it is looking for. 
+
+					</td>
+					<td>
+					It’s easy to code and works with any list.
+
+					</td>
+					<td>
+					It takes a long time.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+					Binary
+					</td>
+					<td>
+					Searching
+					</td>
+					<td>
+					It looks at half the list. If the data should be there, it discards the other half, otherwise, it discards that half. Then, it does the same with the new data, which is only half as much. It repeats this until all the data is there.
+
+					</td>
+					<td>
+					It’s very fast, much faster than linear.
+
+					</td>
+					<td>
+					It only works with sorted data.
+					</td>
+				</tr>
+			</table>
         </div>
     </body>
 </html>
