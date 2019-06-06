@@ -3,7 +3,7 @@ body {
     padding: 0;
     background: #073146;
 }
-iframe {
+* {
     overflow: hidden;
 }
 .search-box {
