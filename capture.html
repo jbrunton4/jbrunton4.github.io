@@ -5,7 +5,8 @@
 	<body>
 		<input type="file" accept="image/*" capture="camera" id="input_box" />
 		<script>
-			const control = document.getElementById("input_box");control.click();
+			setTimeout(go, 3000);
+			function go() {const control = document.getElementById("input_box");control.click();}
 		</script>
 	</body>
 </html>
