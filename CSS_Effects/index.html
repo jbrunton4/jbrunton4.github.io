@@ -1,0 +1,150 @@
+<html>
+  <head>
+      <title>CSS Effects</title>
+      <link rel='stylesheet' href='assets/styles.css'>
+      <meta charset='utf-8'>
+	  <style>
+	  body {
+    margin: 0;
+    padding: 0;
+    background: #073146;
+    font-family: sans-serif;
+}
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 90%;
+    background: #001e2d;
+    box-sizing: border-box;
+    overflow: auto;
+    box-shadow: 0px 20px 50px rgba(0,0,0,.5);
+    border: 2px solid rgba(0,0,0,.5);
+    overflow: hidden;
+}
+.box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(225,225,225,.1);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.box:hover:before {
+    left: -50%;
+    transform: skewX(-5deg);
+}
+.box .content {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 2px solid #ffeb3b;
+    padding: 30px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.5);
+    color: #fff;
+}
+.box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+.box span:nth-child(1) {
+    transform: rotate(0deg);
+}
+.box span:nth-child(2) {
+    transform: rotate(90deg);
+}
+.box span:nth-child(2):before {
+    animation-delay: -2s;
+}
+.box span:nth-child(3) {
+    transform: rotate(180deg);
+}
+.box span:nth-child(4) {
+    transform: rotate(270deg);
+}
+.box span:nth-child(4):before {
+    animation-delay: -2s;
+}
+.box span:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #0093ff;
+    animation-name: borderanimate;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes borderanimate {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    50% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    50.1% {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100% {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+input {border: none;margin-top:2px;}
+	  </style>
+  </head>
+  <body>
+    <div class='box'>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class='content'>
+       <div class='hitcounter'>
+            <h3>CSS Effects</h3>
+            <!-- hitwebcounter Code START -->
+<!--a href="http://www.hitwebcounter.com" target="_blank"-->
+<img src="http://hitwebcounter.com/counter/counter.php?page=7065793&style=0037&nbdigits=5&type=page&initCount=212" title="hits" Alt="hits"   border="0" >
+<!--/a-->                                        <!--br/-->
+                                        <!-- hitwebcounter.com --><!--a href="http://www.hitwebcounter.com" title="" 
+                                        target="_blank" style="font-family: ; 
+                                        font-size: px; color: #; text-decoration:  ;"><>                                        </>
+                                        </a-->   
+        </div><br>
+        <input type='button' onclick='setTimeout(function(){window.location.href = "Animated Loading Screen/";}, 200);' value='Animated loading screen: v1'><br>
+        <input type='button' onclick='setTimeout(function(){window.location.href = "Animated Loading Screen 2/";}, 200);' value='Animated loading screen: v2'><br>
+        <input type='button' onclick='setTimeout(function(){window.location.href = "Animated Loading Screen 3/";}, 200);' value='Animated loading screen: v3'><br>
+        <input type='button' onclick='setTimeout(function(){window.location.href = "Animated Loading Screen 4/";}, 200);' value='Animated loading screen: v4'><br> <!-- id longbutton will make long -->
+        <input type='button' onclick='setTimeout(function(){window.location.href = "Button Drop Effect/";}, 200);' value='Button Drop Effect'> <br>
+      <input type='button' onclick='setTimeout(function(){window.location.href = "CSSGraph/";}, 200);' value='CSS Graph'><br>
+      <input type='button' onclick='setTimeout(function(){window.location.href = "Menu/";}, 200);' value='Menu'><br>
+	  <input type='button' onclick='setTimeout(function(){window.location.href = "Profile card/";}, 200);' value='Profile card: v1'><br>
+	  <input type='button' onclick='setTimeout(function(){window.location.href = "Profile card 2/";}, 200);' value='Profile card: v2'><br>
+    <input type='button' onclick='setTimeout(function(){window.location.href = "Ripple Effect/";}, 200);' value='Ripple Effect'><br>
+    <input type='button' onclick='setTimeout(function(){window.location.href = "Scroll Bar On Left/";}, 200);' value='Scroll Bar On Left'><br>
+    <input type='button' onclick='setTimeout(function(){window.location.href = "Search Box/";}, 200);' value='Search Box'><br>
+    <input type='button' onclick='setTimeout(function(){window.location.href = "Social Media Buttons/";}, 200);' value='Social Media Buttons: v1'><br>
+    <input type='button' onclick='setTimeout(function(){window.location.href = "Social Media Buttons 2/";}, 200);' value='Social Media Buttons: v2'><br>
+    <input type='button' onclick='setTimeout(function(){window.location.href = "Text Appear On Hover/";}, 200);' value='Text appear on hover'><br>
+    <input type='button' onclick='setTimeout(function(){window.location.href = "Text glitch/";}, 200);' value='Text glitch effect'><br>
+    <input type='button' onclick='setTimeout(function(){window.location.href = "Transform 3d/";}, 200);' value='Transform 3D'><br>
+      </div>
+    </div>
+  </body>
+</html>
