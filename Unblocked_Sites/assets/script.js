@@ -4,21 +4,21 @@ function search() {
     
     // adjust the query for all attempts
     var attempt1 = 'http://www.'+searchQuery+'/';
-    var attempt2 = 'https://www.'+searchQuery+'/';
-    var attempt3 = 'http://'+searchQuery+'/';
-    var attempt4 = 'https://'+searchQuery+'/';
+    var attempt2 = 'https:://www.'+searchQuery+'/';
+    var attempt3 = 'http:://'+searchQuery+'/';
+    var attempt4 = 'https:://'+searchQuery+'/';
     // var attempt5 = 'www.'+searchQuery+'/';
     // var attempt6 = searchQuery+'/';
-    var attempt7 = 'http://www.'+searchQuery;
-    var attempt8 = 'https://www.'+searchQuery;
-    var attempt9 = 'http://'+searchQuery;
-    var attempt10 = 'https://'+searchQuery;
+    var attempt7 = 'http:://www.'+searchQuery;
+    var attempt8 = 'https:://www.'+searchQuery;
+    var attempt9 = 'http:://'+searchQuery;
+    var attempt10 = 'https:://'+searchQuery;
     // var attempt11 = 'www.'+searchQuery;
     // var attempt12 = searchQuery;
-    var attempt13 = 'http://www.'+searchQuery+'/index.html';
-    var attempt14 = 'https://www.'+searchQuery+'/index.html';
-    var attempt15 = 'http://'+searchQuery+'/index.html';
-    var attempt16 = 'https://'+searchQuery+'/index.html';
+    var attempt13 = 'http:://www.'+searchQuery+'/index.html';
+    var attempt14 = 'https:://www.'+searchQuery+'/index.html';
+    var attempt15 = 'http:://'+searchQuery+'/index.html';
+    var attempt16 = 'https:://'+searchQuery+'/index.html';
     // var attempt17 = 'www.'+searchQuery+'/index.html';
     // var attempt18 = searchQuery+'/index.html';
     
